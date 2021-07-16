@@ -1,0 +1,116 @@
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="#">
+                                        <img class="d-block w-100" th:src="@{/static/images/clothing-1.png}" alt="First slide">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#">
+                                        <img class="d-block w-100" th:src="@{/static/images/shoes-1.png}" alt="Second slide">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#">
+                                        <img class="d-block w-100" th:src="@{/static/images/pants-1.png}" alt="Third slide">
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <!-- Main row -->
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3>Weekly Best</h3>
+                </div>
+                <!-- Weekly Best 1 -->
+                <div class="col-md-4">
+                    <div class="card card-outline">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <a th:href="@{/product/view/detail}">
+                                    <img class="img-fluid" th:src="@{/static/images/clothing-2.png}" alt="Product picture">
+                                </a>
+                            </div>
+                            <a th:href="@{/product/view/detail}">
+                                <h3 class="text-dark profile-username text-center">Color T-shirts</h3>
+                                <p class="text-muted text-center">[90-105]</p>
+                                <p class="text-dark text-center">19,800원</p>
+                            </a>
+
+                            <ul class="list-group list-group-unbordered mb-3">
+                                <li class="list-group-item">
+                                    <i class="fas fa-reply"></i> <b>Review</b> <a class="float-right">1,322</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i> <b>Star</b> <a class="float-right">2,549</a>
+                                </li>
+                            </ul>
+
+                            <span class="right badge badge-danger">주문 폭주</span>
+                            <span class="right badge badge-warning">한정 수량</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Weekly Best 2 -->
+                <div class="col-md-4">
+                    <div class="card card-outline">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <a th:href="@{/product/view/detail}">
+                                    <img class="img-fluid" th:src="@{/static/images/pants-2.png}" alt="Product picture">
+                                </a>
+                            </div>
+                            <a th:href="@{/product/view/detail}">
+                                <h3 class="text-dark profile-username text-center">Blue Jeans</h3>
+                                <p class="text-muted text-center">[28-34]</p>
+                                <p class="text-dark text-center">39,800원</p>
+                            </a>
+
+                            <ul class="list-group list-group-unbordered mb-3">
+                                <li class="list-group-item">
+                                    <i class="fas fa-reply"></i> <b>Review</b> <a class="float-right">890</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i> <b>Star</b> <a class="float-right">1,423</a>
+                                </li>
+                            </ul>
+
+                            <span class="right badge badge-danger">주문 폭주</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

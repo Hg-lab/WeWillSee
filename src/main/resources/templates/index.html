@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <th:block th:include="fragments/common/header"></th:block>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <th:block th:include="fragments/common/navbar"></th:block>
+
+    <!-- Main Sidebar Container -->
+    <th:block th:include="fragments/common/sidebar"></th:block>
+
+    <!-- Content Wrapper. Contains page content -->
+    <th:block th:include="${template}"></th:block>
+    <!-- /.content-wrapper -->
+
+    <th:block th:include="fragments/common/footer"></th:block>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+
+</div>
+<!-- ./wrapper -->
+
+<th:block th:include="fragments/common/script"></th:block>
+</body>
+</html>

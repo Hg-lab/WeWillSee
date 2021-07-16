@@ -1,0 +1,41 @@
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+
+
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a th:href="@{/}" class="brand-link text-center">
+        <span class="brand-text font-weight-light">Kideveloper</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+
+                <li class="nav-item has-treeview" th:each="category : ${categories}">
+                    <a href="#" class="nav-link">
+                        <i th:class="nav-icon" th:classappend="${category.key.icon}"></i>
+                        <p>
+                            <span th:text="${category.key.title}" th:remove="tag"></span>
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" th:each="child : ${category.value}">
+                        <li class="nav-item">
+                            <a th:href="@{'/product/view/list/' + ${child.id}}" class="nav-link">
+                                <i class="nav-icon" th:classappend="${child.icon}"></i>
+                                <p th:text="${child.title}"></p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
